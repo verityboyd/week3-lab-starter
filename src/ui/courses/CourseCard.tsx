@@ -2,8 +2,8 @@ import { StyleSheet } from "react-native";
 
 // TODO: Make a Props type for the props of our CourseCard component
 
-export default function CourseCard(/*TODO: Add props here (use desctructuring)*/) {
-  // TODO: Use descructuring to extract values from the course
+export default function CourseCard(/*TODO: Add props here (use destructuring)*/) {
+  // TODO: Use destructuring to extract values from the course
   // If values need to be modified or altered for display (ex: term number to "Term X"),
   // you can do that directly in the tsx code below, or create new variables here
   // if the values will be used in the log function as well, create variables for them here
