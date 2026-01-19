@@ -1,4 +1,6 @@
 // TODO: Create a type for course ids, which should be strings
+import type { Delivery } from "./common";
+type CourseId = string;
 
 // TODO: Create an interface for courses
 // The interface should include the following properties:
@@ -11,6 +13,18 @@
 // an optional delivery method (hint: use the Delivery type from common.ts)
 // an optional array of pre-requisite course ids (hint: use the CourseId type created above)
 // an optional note
+
+interface Course {
+  id: CourseId;
+  courseCode: string;
+  courseTitle: string;
+  courseDescription: string;
+  credits?: number;
+  termNumber?: number;
+  deliveryMethod?: Delivery;
+  preReq?: CourseId[];
+  note?: string;
+}
 
 // once all group members have completed their sections, add the following field:
 // an optional array of program ids that this course is part of
