@@ -81,7 +81,7 @@ You are responsible for **everything related to your entity**:
 1. **One person** in your group forks the repository on GitHub
 2. Everyone else clones **that fork**
 3. Each person creates their **own branch** for their entity
-4. You commit only your own work (comitting after each step is recommended)
+4. You commit only your own work (committing after each step is recommended)
 5. You merge everyone’s work together at the end
 
 You may use:
