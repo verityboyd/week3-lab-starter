@@ -7,7 +7,6 @@ type StaffId = string;
 type StaffRole = "Instructor" | "Program Chair" | "Coordinator" | "Advisor";
 
 // TODO: Create an interface for staff members
-
 // The interface should include the following properties:
 // an id (hint: use the StaffId type created above)
 // a name
@@ -18,9 +17,6 @@ type StaffRole = "Instructor" | "Program Chair" | "Coordinator" | "Advisor";
 // an optional start year
 // an array of specialties
 // an optional fun fact
-
-// once all group members have completed their sections, add the following field:
-// an optional array of course ids that this staff member teaches
 
 export interface Staff {
   id: StaffId;
@@ -33,3 +29,6 @@ export interface Staff {
   specialties: string[];
   funFact?: string;
 }
+
+// TODO: once all group members have completed their sections, add the following field:
+// an optional array of course ids that this staff member teaches
