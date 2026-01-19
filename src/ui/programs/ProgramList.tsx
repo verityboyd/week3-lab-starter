@@ -2,7 +2,6 @@ import { StyleSheet } from "react-native";
 
 export default function ProgramList() {
   // Optional TODO: Sort programs by name before rendering by copying the programs array and sorting the copy
-
   // TODO: Write the tsx code to render a list of ProgramCard components
   // The root component should be a View for the list, and inside of the view we should map over the programs array
   // For each program, render a ProgramCard component, passing the program as a prop
