@@ -1,0 +1,62 @@
+import { CampusResource } from "../types/resource";
+
+export const campusResources: CampusResource[] = [
+  {
+    id: "res-001",
+    name: "Student Counseling Center",
+    category: "Student Support",
+    school: "School of Health and Public Safety",
+    location: "Building A, Room 101",
+    email: "counseling@sait.ca",
+    phone: "403-284-1234",
+    hours: "Monday-Friday 9:00 AM - 5:00 PM",
+    website: "https://www.sait.ca/student-services/counseling",
+    tags: ["mental health", "academic support", "wellness"],
+    note: "Confidential support available for all students.",
+  },
+  {
+    id: "res-002",
+    name: "IT Help Desk",
+    category: "Tech Support",
+    location: "Library, Ground Floor",
+    email: "helpdesk@sait.ca",
+    phone: "403-284-5678",
+    hours: "Monday-Friday 8:00 AM - 8:00 PM",
+    tags: ["computer", "software", "network", "technical support"],
+  },
+  {
+    id: "res-003",
+    name: "Library Study Rooms",
+    category: "Academic Help",
+    school: "School for Advanced Digital Technology",
+    location: "Library Building",
+    tags: ["study space", "group work", "quiet area"],
+    note: "Book in advance during peak hours.",
+  },
+  {
+    id: "res-004",
+    name: "Fitness Center",
+    category: "Wellness",
+    tags: ["exercise", "gym", "health"],
+  },
+  {
+    id: "res-005",
+    name: "Career Services",
+    category: "Staff Resources",
+    email: "careers@sait.ca",
+    website: "https://www.sait.ca/careers",
+    tags: [
+      "job search",
+      "resume",
+      "interview prep",
+      "professional development",
+    ],
+  },
+  {
+    id: "res-006",
+    name: "Campus Security",
+    category: "Campus Services",
+    phone: "403-284-9999",
+    tags: ["safety", "emergency", "security"],
+  },
+];
