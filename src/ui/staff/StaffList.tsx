@@ -1,8 +1,13 @@
 import { StyleSheet } from "react-native";
+import { staff } from "../../data/staff";
 
 export default function StaffList() {
   // Optional TODO: Sort staff by name before rendering by copying the staff array and sorting the copy
-
+  const sorted = [...staff].sort((a, b) => {
+    const byName = a.name.localeCompare(b.name);
+    if (byName !== 0) return byName;
+    return a.name.localeCompare(b.name);
+  });
   // TODO: Write the tsx code to render a list of StaffCard components
   // The root component should be a View for the list, and inside of the view we should map over the staff array
   // For each person, render a StaffCard component, passing the person as a prop
