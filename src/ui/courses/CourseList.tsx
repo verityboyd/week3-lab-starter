@@ -18,7 +18,7 @@ export default function CourseList() {
   return (
     <View style={styles.list}>
       {courses.map((course) => (
-        <CourseCard resource={course} key={course.id} />
+        <CourseCard course={course} key={course.id} />
       ))}
     </View>
   );
