@@ -1,4 +1,4 @@
-// This file is used to manually create sections in our scollable list. Try to understand how it works.
+// This file is used to manually create sections in our scrollable list. Try to understand how it works.
 
 import { StyleSheet, Text, View } from "react-native";
 

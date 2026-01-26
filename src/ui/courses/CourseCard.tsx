@@ -1,19 +1,45 @@
-import { StyleSheet } from "react-native";
+import { Course } from "@/src/types/course";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 
 // TODO: Make a Props type for the props of our CourseCard component
 
-export default function CourseCard(/*TODO: Add props here (use destructuring)*/) {
+type Props = {
+  course: Course;
+};
+
+export default function CourseCard({ course }: Props) {
   // TODO: Use destructuring to extract values from the course
   // If values need to be modified or altered for display (ex: term number to "Term X"),
   // you can do that directly in the tsx code below, or create new variables here
   // if the values will be used in the log function as well, create variables for them here
 
+  const {
+    courseCode,
+    courseTitle,
+    courseDescription,
+    credits,
+    termNumber,
+    deliveryMethod,
+    preReq,
+    note,
+  } = course;
+
   // TODO: Create a function called logCourseInfo that logs a formatted summary of the course to the console
   // Example output:
   // Course: CPRG 303 | Mobile Application Development | credits: 3 | Term 2 | In-person
   // Prereqs: CPRG 202, CPRG 101 (displaying the ids initially is fine)
-  // Programs: Diploma in Software Development, Degree in Computer Science (once that field has been added)
+  // Programs: Diploma in Software Development, Degree in Computer Science (once that field has been added) !!!!!!!!!!!!
   // Note: This course is required for the Software Development program.
+
+  function logCourseInfo() {
+    console.log(
+      `Course: ${courseCode} | ${courseTitle} | Credits: ${credits ?? 3}`,
+    );
+    if (termNumber) console.log(` | Term ${termNumber}`);
+    if (deliveryMethod) console.log(` | ${deliveryMethod}`);
+    if (preReq) console.log(`Prereqs: ${preReq}`);
+    if (note) console.log(`Note: ${note}`);
+  }
 
   // TODO: Create the TSX for the course card layout
   // There should be a Pressable as the root element, with onPress set to the logCourseInfo function created above
@@ -29,7 +55,20 @@ export default function CourseCard(/*TODO: Add props here (use destructuring)*/)
   // (The three text components above should use the meta style)
   // If there is a note, a Text for the note
 
-  return null;
+  return (
+    <Pressable onPress={logCourseInfo} style={styles.card}>
+      <View style={styles.topRow}>
+        <Text style={styles.code}>{courseCode}</Text>
+        <Text style={styles.credits}>{credits}</Text>
+        <Text style={styles.title}>{courseTitle}</Text>
+        <Text style={styles.desc}>{courseDescription}</Text>
+      </View>
+      {termNumber && <Text style={styles.meta}>Term: {termNumber}</Text>}
+      {deliveryMethod && <Text style={styles.meta}>Delivery Method:</Text>}
+      {preReq && <Text style={styles.meta}>Prereqs:</Text>}
+      <Text style={styles.note}>{note}</Text>
+    </Pressable>
+  );
 }
 
 const styles = StyleSheet.create({
